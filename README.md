@@ -5,7 +5,7 @@
 
 
 loader (need to be whitelist)
-!()[https://raw.githubusercontent.com/JavieroXD/Yze/refs/heads/main/Yzepreview.jpg]
+!()(https://raw.githubusercontent.com/JavieroXD/Yze/refs/heads/main/Yzepreview.jpg)
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/JavieroXD/Yze/refs/heads/main/loader'))()
 ```
